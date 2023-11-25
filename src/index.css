@@ -1,0 +1,235 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: 'SpaceGrotesk';
+  src: local('SpaceGrotesk'), url('../public/fonts/SpaceGrotesk-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: local('Inter'), url('../public/fonts/Inter-VariableFont_slnt,wght.ttf') format('truetype');
+}
+
+@layer utilities {
+  .hero-title {
+    white-space: nowrap;
+  }
+  .title {
+    @apply text-lg md:text-2xl text-orange-color font-bold text-center uppercase mb-6
+  }
+
+  .btn {
+    @apply font-medium px-4 py-1.5 md:px-8 md:py-3 text-sm md:text-base;
+    cursor: pointer;
+    border-radius: 8px;
+  }
+
+  .email-input {
+    border: 1px solid #1A1A1A;
+    box-shadow: 0px 1px 2px rgba(17, 24, 39, 0.05);
+    border-radius: 8px;
+  }
+  .border-btn {
+    border-width: 1px;
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+  }
+  .orange-btn {
+    @apply bg-orange-color text-white;
+  }
+
+  .normal-btn {
+    @apply bg-white text-main-color border-main-color ;
+  }
+
+	.container {
+		width: 100%;
+		height: 100%;
+		padding-right: var(--bs-gutter-x,.75rem);
+    padding-left: var(--bs-gutter-x,.75rem);
+    margin-right: auto;
+    margin-left: auto;
+	}
+
+  .line-h {
+    line-height: 35px;
+  }
+
+  .divider {
+    @apply border border-solid border-gray-400 my-2;
+  }
+
+	.card {
+    border: 1px solid #D2D6DB;
+    box-shadow: 0px 4px 8px -2px rgba(0, 0, 0, 0.1), 0px 1px 4px -2px rgba(0, 0, 0, 0.06);
+    border-radius: 16px;
+	}
+  .service-card {
+    @apply font-['SpaceGrotesk'] font-bold text-2xl mx-auto mb-4
+   }
+  .service-card-item {
+    @apply font-['Inter'] text-base text-[#4D5761]
+  }
+
+	.hero {
+		@apply bg-cover;
+    z-index: 1;
+	}
+	.hero::before {
+		@apply absolute top-0 left-0 w-full h-full bg-no-repeat;
+    /* background-image: url(/images/slide_bg_circle.png); */
+    content: "";
+    z-index: -1;
+    opacity: 0.5;
+	}
+  .text-100 {
+    font-size: 100px;
+  }
+  .text-80 {
+    font-size: 80px;
+  }
+  .leading-80 {
+    line-height: 80%;
+  }
+  .minimal-btn {
+  	color: #211e3b;
+    border: 1px solid #b0cff2;
+    background: transparent;
+    -webkit-box-shadow: inherit;
+    box-shadow: inherit;
+  }
+  .nav-item {
+    @apply bg-gray-200 w-full pt-2 pb-2 pl-2 hover:bg-gray-400 active:bg-gray-300
+  }
+  .box-shadow {
+    box-shadow: 0px 30px 60px 0px rgba(200, 226, 255, 0.45);
+  }
+  .inner-shadow {
+    box-shadow: inset 0px -2px 10px 0px rgba(200, 226, 255, 0.45);
+  }
+  .team {
+    transition: transform .8s; /* Animation */
+    cursor: pointer
+  }
+
+  .team:hover{
+    transform: scale(0.95); 
+  }
+
+  .service-canvas {
+    z-index: 10;
+  }
+
+  .fade-out-0 {
+    opacity: 0;
+    animation: fadeOut 1s;
+    -webkit-animation-fill-mode: forwards;
+  }
+
+  .fade-out-1 {
+    opacity: 0;
+    animation: fadeOut 1s;
+    -webkit-animation-fill-mode: forwards;
+    animation-delay: 0.25s;
+  }
+  
+  .fade-out-2 {
+    opacity: 0;
+    animation: fadeOut 1s;
+    -webkit-animation-fill-mode: forwards;
+    animation-delay: 0.5s;
+  }
+
+  .fade-out-3 {
+    opacity: 0;
+    animation: turn 2.75s;
+    -webkit-animation-fill-mode: forwards;
+    animation-delay: 0.75s;
+  }
+
+  .fade-out-4 {
+    opacity: 0;
+    animation: turn 2.75s;
+    -webkit-animation-fill-mode: forwards;
+    animation-delay: 1s;
+  }
+  
+  .fade-out-5 {
+    opacity: 0;
+    animation: fadeOut 1s;
+    -webkit-animation-fill-mode: forwards;
+    animation-delay: 1.25s;
+  }
+
+  .fade-out-6 {
+    opacity: 0;
+    animation: fadeOut 1s;
+    -webkit-animation-fill-mode: forwards;
+    animation-delay: 1.5s;
+  }
+
+  .fade-out-7 {
+    opacity: 0;
+    animation: fadeOut 1s;
+    -webkit-animation-fill-mode: forwards;
+    animation-delay: 1.75s;
+  }
+  
+  .fade-out-8 {
+    opacity: 0;
+    animation: fadeOut 1s;
+    -webkit-animation-fill-mode: forwards;
+    animation-delay: 2s;
+  }
+  .fade-out-9 {
+    opacity: 0;
+    animation: fadeOut 1s;
+    -webkit-animation-fill-mode: forwards;
+    animation-delay: 2.25s;
+  }
+  
+  .fade-out-10 {
+    opacity: 0;
+    animation: fadeOut 1s;
+    -webkit-animation-fill-mode: forwards;
+    animation-delay: 2.5s;
+  }
+
+  .square {
+    opacity: 0;
+  }
+
+  @keyframes turn {
+    0%   {color:white; opacity: 0;}
+    25%  {color:white; opacity: 1;}
+    75%  {color:white; opacity: 1;}
+    100% {color:#FF8A00; opacity: 1;}
+  }
+
+  @keyframes fadeOut {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+
+  .nova {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+    overflow: hidden;
+  }
+  
+}
