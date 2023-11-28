@@ -36,13 +36,13 @@ const Footer = () => {
             <div className="flex md:w-1/2 ">
               <div className="flex flex-col ">
                 <div className="my-2 font-semibold">Address</div>
-                <div className="font-normal text-[#6B7280]">Dubai, UAE</div>
+                <div className="font-normal text-[#6B7280]">US</div>
               </div>
             </div>
             <div className="md:w-1/2">
               <p className="my-2 font-semibold">Contact</p>
               <p className="font-normal text-[#6B7280]">
-                Email:applesm18@gmail.com
+                Email:xxx@gmail.com
               </p>
             </div>
           </div>
